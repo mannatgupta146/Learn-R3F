@@ -4,7 +4,7 @@ const Experience = () => {
   return (
     <>
       <mesh>
-        <boxGeometry />
+        <boxGeometry args={[2, 5, 2]}/>
         <meshBasicMaterial color={"red"} />
       </mesh>
     </>

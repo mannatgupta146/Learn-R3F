@@ -3,10 +3,17 @@ import React from 'react'
 const Experience = () => {
   return (
     <>
-      <mesh>
-        <boxGeometry args={[2, 5, 2]}/>
-        <meshBasicMaterial color={"red"} />
-      </mesh>
+      <group position={[0, 2, 0]}>
+        <mesh position={[-1, 0, 0]}>
+            <boxGeometry />
+            <meshBasicMaterial color={"red"} />
+        </mesh>
+
+        <mesh position={[1, 0, 0]}>
+            <boxGeometry />
+            <meshBasicMaterial color={"green"} />
+        </mesh>
+      </group>
     </>
   );
 };

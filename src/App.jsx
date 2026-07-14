@@ -7,7 +7,7 @@ function App() {
   return (
     <>
      <div className="parent h-screen w-full">
-      <Canvas>
+      <Canvas camera={{position: [0, 6, 0], fov: 50 } }>
         <OrbitControls />
         <Experience />
       </Canvas>

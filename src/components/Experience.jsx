@@ -1,9 +1,14 @@
 import React from 'react'
 
 const Experience = () => {
-  return 
+  return (
     <>
+      <mesh>
+        <boxGeometry />
+        <meshBasicMaterial color={"red"} />
+      </mesh>
     </>
-}
+  );
+};
 
-export default Experience
+export default Experience;

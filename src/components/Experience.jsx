@@ -1,4 +1,4 @@
-import { useGLTF, useTexture } from '@react-three/drei';
+import { Environment, useGLTF, useTexture } from '@react-three/drei';
 import { useFrame, useLoader } from '@react-three/fiber';
 import React, { useRef } from 'react'
 import * as THREE from "three"
@@ -23,14 +23,16 @@ const Experience = () => {
 
   return (
     <>
-      {/* <mesh ref={cubeRef}>
+      <mesh ref={cubeRef}>
         <boxGeometry />
-        <meshBasicMaterial map={dreiTexture} />
-      </mesh> */}
+        <meshStandardMaterial roughness={0.01} metalness={0.9} color={"red"} />
+      </mesh>
 
-      <ambientLight intensity={3} color={"#fffff"} />
+      {/* <ambientLight intensity={3} color={"#fffff"} /> */}
 
-      <primitive object={model.scene} position={[0, -1, -4]} />
+      {/* <primitive object={model.scene} position={[0, -1, -4]} /> */}
+
+      <Environment files={"./envMap.hdr"} />
     </>
   );
 };
